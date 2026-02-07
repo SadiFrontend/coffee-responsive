@@ -1,0 +1,87 @@
+.collection {
+  @include margin;
+  @include flex;
+  padding: 50px;
+  position: relative;
+  &-back {
+    position: absolute;
+    top: 160px;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 72px;
+    text-align: center;
+    color: #83888f;
+    z-index: 1;
+  }
+  &-packs {
+    width: 100%;
+    margin-top: 150px;
+    position: relative;
+    z-index: 2;
+    @include flex;
+  }
+  &-pack {
+    width: 250px;
+    border-radius: 10px;
+    &:hover {
+      background-color: #b7bfc9;
+      transition: all 0.3s linear;
+    }
+  }
+  &-title {
+    @include title(24px, 250px, #333d4b);
+    text-align: center;
+    margin: 20px 0;
+  }
+  &-text {
+    @include text("Barlow", 230px, #333d4b);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .collection {
+    margin: 100px auto;
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-back {
+      position: relative;
+      top: 0;
+      font-size: 40px;
+      line-height: normal;
+      text-align: center;
+      opacity: 0.5;
+    }
+
+    &-packs {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      gap: 40px;
+    }
+
+    &-pack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      @include title(24px, auto, #333d4b);
+      margin: 15px 0 10px;
+    }
+
+    &-text {
+      @include text("Barlow", auto, #333d4b);
+    }
+  }
+}

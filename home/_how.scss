@@ -1,0 +1,109 @@
+.how {
+  @include margin;
+  margin-top: 250px;
+  padding: 50px;
+  &-subtitle {
+    @include title(25px, auto, #83888f);
+  }
+  &-lines {
+    display: flex;
+    align-items: center;
+  }
+  &-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 10%;
+    border: 3px solid forestgreen;
+    transition: transform 1s ease;
+    &:hover {
+      background-color: #0e8784;
+      transform: rotate(135deg);
+    }
+  }
+
+  &-line {
+    width: 300px;
+    height: 3px;
+    background: #fdd6ba;
+    margin: 100px 0;
+  }
+  &-order {
+    @include flex;
+    width: 950px;
+  }
+  &-order1 {
+    width: 300px;
+    &-title {
+      @include title(35px, 280px, #333d4b);
+      margin: 30px 0;
+    }
+    &-text {
+      @include text("Barlow", 250px, #333d4b);
+    }
+  }
+  &-number {
+    @include title(50px, auto, #fdd6ba);
+  }
+  &-btn {
+    @include button;
+    margin: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .how {
+    width: 90%;
+    text-align: center;
+    padding: 0;
+    &-subtitle {
+      @include title(24px, auto, #83888f);
+    }
+    &-lines {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-circle {
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 10%;
+      border: 3px solid forestgreen;
+      transition: transform 1s ease;
+      &:active {
+        background-color: #0e8784;
+        transform: rotate(135deg);
+      }
+    }
+
+    &-line {
+      width: 100px;
+      height: 3px;
+      background: #fdd6ba;
+      margin: 100px 0;
+    }
+    &-order {
+      @include flex;
+      flex-direction: column;
+      gap: 50px;
+      width: 100%;
+    }
+    &-order1 {
+      &-title {
+        @include title(25px, auto, #333d4b);
+        margin: 30px 0;
+      }
+      &-text {
+        @include text("Barlow", auto, #333d4b);
+      }
+    }
+    &-number {
+      @include title(50px, auto, #fdd6ba);
+    }
+    &-btn {
+      @include button;
+      background: #0e8784;
+      margin: 30px 0;
+    }
+  }
+}

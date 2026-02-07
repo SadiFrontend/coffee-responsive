@@ -1,0 +1,100 @@
+@mixin text($font-family, $width, $color) {
+  width: $width;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 26px;
+  color: $color;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+@mixin nav-link {
+  color: #83888f;
+  font-size: 16px;
+  font-family: "Barlow";
+  font-weight: 500;
+  &:hover {
+    color: #333d4b;
+    transition: all 0.3s linear;
+  }
+}
+@mixin nav-link2 {
+  color: #83888f;
+  font-size: 16px;
+  font-family: "Barlow";
+  font-weight: 500;
+  &:hover {
+    color: #fff;
+    transition: all 0.3s linear;
+  }
+}
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin button {
+  width: 180px;
+  height: 45px;
+  font-family: "Fraunces";
+  color: #fff;
+  font-size: 16px;
+  background: #66d2cf;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s linear;
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: #66d2cf;
+    border: 3px solid #66d2cf;
+  }
+}
+
+@mixin title($font-size, $width, $color) {
+  width: $width;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: $font-size;
+  color: $color;
+}
+@mixin back-img($background-image) {
+  background-image: $background-image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin margin {
+  margin: auto;
+  width: 1200px;
+}
+@mixin choose-box {
+  width: 180px;
+  height: 200px;
+  background: #f4f1eb;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  color: #333d4b;
+  transition: background-color 0.3s linear;
+}
+@mixin button2($width, $height, $back) {
+  width: $width;
+  height: $height;
+  font-family: "Fraunces";
+  color: #fff;
+  font-size: 10px;
+  background: $back;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s linear;
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: #66d2cf;
+    border: 3px solid #66d2cf;
+  }
+}
